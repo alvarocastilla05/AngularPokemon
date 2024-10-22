@@ -1,0 +1,18 @@
+<div class="container">
+    <div class="row">
+        @for (item of listGames; track item) {
+        <div class="card border-0 jockey-one-regular mx-3 my-4 bg-black" style="width: 290px;">
+
+            <div
+                class="container d-flex justify-content-between card-body rounded-4 mt-1 px-2">
+                <!--Número y nombre-->
+                <div class="ms-2">
+                    <h4 class="card-title blanco m-0 text-capitalize text-light">{{item.name}}</h4>
+                </div>
+
+            </div>
+
+        </div>
+        }
+    </div>
+</div>
