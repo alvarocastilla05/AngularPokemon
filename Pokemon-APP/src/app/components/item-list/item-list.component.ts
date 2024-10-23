@@ -10,11 +10,18 @@ import { ItemService } from '../../services/item.service';
 export class ItemListComponent implements OnInit {
   listItem: Item[] = [];
 
+  img = 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/';
+
   constructor(private itemService: ItemService) { }
 
   ngOnInit(): void {
     this.itemService.getItems().subscribe(respuesta => {
       this.listItem = respuesta.results;
     });
+
+  }
+
+  getImage(name: string): string {
+    return `${this.img}${name}.png`;
   }
 }
