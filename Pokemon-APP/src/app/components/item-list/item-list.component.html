@@ -1,0 +1,29 @@
+<div class="container">
+    <div class="row">
+        @for (item of listItem; track item) {
+            <div class="col-md-3 col-12 p-2 my-3">
+                <div class="card border-0 mx-3 my-4" style="width: 290px;">  
+                    <!--Parte superior-->
+                    <div class="border-5 rounded-4 bordeCaja sombreado">
+                        <a><img [src]="getImage(item.name)" class="card-img-top rounded-4" [alt]="item.name"></a>
+                    </div>
+
+                    <!--Parte inferior-->
+                    <div class="container d-flex justify-content-between card-body rounded-4 mt-1 px-2 fondoNegro sombreado">
+                        <div class="ms-2">
+                            <h5 class="card-title text-light m-0 text-capitalize tipografia">{{ item.name }}</h5>
+                        </div>
+                        <!--<div class="me-2" style="width: 35%;">
+                            <div class="px-3 rounded-5 fondoPlanta">
+                                <p class="text-light text-center mb-2" id="planta">Planta</p>
+                            </div>
+                            <div class="px-3 rounded-5 fondoVeneno">
+                                <p class="text-light text-center mt-1 mb-0" id="veneno">Veneno</p>
+                            </div> 
+                        </div>-->
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+</div>
