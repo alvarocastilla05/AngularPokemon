@@ -10,6 +10,7 @@ import { PokemonListComponent } from './components/pokemon-list/pokemon-list.com
 import { GameListComponent } from './components/game-list/game-list.component';
 import { provideHttpClient } from '@angular/common/http';
 import { ItemListComponent } from './components/item-list/item-list.component';
+import { MenuNavComponent } from './shared/menu-nav/menu-nav/menu-nav.component';
 
 
 @NgModule({
@@ -17,7 +18,8 @@ import { ItemListComponent } from './components/item-list/item-list.component';
     AppComponent,
     PokemonListComponent,
     GameListComponent,
-    ItemListComponent
+    ItemListComponent,
+    MenuNavComponent
 
   ],
   imports: [
