@@ -1,5 +1,5 @@
-<div class="container">
-    <div class="row">
+<div class="container mt-5 pt-5">
+    <div class="row mt-5">
         @for (item of listItem; track item) {
             <div class="col-md-3 col-12 p-2 my-3">
                 <div class="card border-0 mx-3 my-4" style="width: 290px;">  
@@ -7,6 +7,7 @@
                     <div class="border-5 rounded-4 bordeCaja sombreado">
                         <a><img [src]="getImage(item.name)" class="card-img-top rounded-4" [alt]="item.name"></a>
                     </div>
+
 
                     <!--Parte inferior-->
                     <div class="container d-flex justify-content-between card-body rounded-4 mt-1 px-2 fondoNegro sombreado">
