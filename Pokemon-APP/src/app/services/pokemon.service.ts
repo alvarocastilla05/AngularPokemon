@@ -13,4 +13,5 @@ export class PokemonService {
   getPokemonList(): Observable<PokemonListResponse>{
     return this.http.get<PokemonListResponse>('https://pokeapi.co/api/v2/pokemon/');
   }
+  
 }
