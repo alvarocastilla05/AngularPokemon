@@ -1,31 +1,7 @@
 <div class="container mt-5 pt-5">
     <div class="row mt-5">
         @for(pokemon of listPokemon; track pokemon){
-            <div class="col-md-3 col-12 p-2 my-3">
-                <div class="card border-0 mx-3 my-4" style="width: 290px;">  
-                    <!--Parte superior-->
-                    <div class="border-5 rounded-4 bordeCaja sombreado">
-                        <a><img [src]="getImagenPokemon(pokemon.url)" class="card-img-top rounded-4" [alt]="pokemon.name"></a>
-                    </div>
-
-
-                    <!--Parte inferior-->
-                    <div class="container d-flex justify-content-between card-body rounded-4 mt-1 px-2 fondoNegro sombreado">
-                        <div class="ms-2">
-                            <h6 class="card-number m-0 mb-1 grisClaro tipografia">#{{ pokemon.url.split("/")[6] }}</h6>
-                            <h5 class="card-title text-light m-0 text-capitalize tipografia">{{ pokemon.name }}</h5>
-                        </div>
-                        <!--<div class="me-2" style="width: 35%;">
-                            <div class="px-3 rounded-5 fondoPlanta">
-                                <p class="text-light text-center mb-2" id="planta">Planta</p>
-                            </div>
-                            <div class="px-3 rounded-5 fondoVeneno">
-                                <p class="text-light text-center mt-1 mb-0" id="veneno">Veneno</p>
-                            </div>
-                        </div>-->
-                    </div>
-                </div>
-            </div>
+            <app-pokemon-card [pokemonId]="getPokemonId(pokemon.url)"></app-pokemon-card>
         }
     </div>
 </div>

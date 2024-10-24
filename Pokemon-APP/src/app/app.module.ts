@@ -12,6 +12,7 @@ import { provideHttpClient } from '@angular/common/http';
 import { ItemListComponent } from './components/item-list/item-list.component';
 import { MenuNavComponent } from './shared/menu-nav/menu-nav/menu-nav.component';
 import { PageNotFoundComponent } from './shared/page-not-found/page-not-found.component';
+import { PokemonCardComponent } from './components/pokemon-card/pokemon-card.component';
 
 
 
@@ -22,7 +23,8 @@ import { PageNotFoundComponent } from './shared/page-not-found/page-not-found.co
     GameListComponent,
     ItemListComponent,
     MenuNavComponent,
-    PageNotFoundComponent
+    PageNotFoundComponent,
+    PokemonCardComponent
   ],
   imports: [
     BrowserModule,
