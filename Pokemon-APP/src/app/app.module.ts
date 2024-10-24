@@ -12,6 +12,8 @@ import { provideHttpClient } from '@angular/common/http';
 import { ItemListComponent } from './components/item-list/item-list.component';
 import { MenuNavComponent } from './shared/menu-nav/menu-nav/menu-nav.component';
 import { PageNotFoundComponent } from './shared/page-not-found/page-not-found.component';
+import { ItemCardComponent } from './components/item-card/item-card.component';
+import { ItemDetailComponent } from './components/item-detail/item-detail.component';
 
 
 
@@ -22,7 +24,9 @@ import { PageNotFoundComponent } from './shared/page-not-found/page-not-found.co
     GameListComponent,
     ItemListComponent,
     MenuNavComponent,
-    PageNotFoundComponent
+    PageNotFoundComponent,
+    ItemCardComponent,
+    ItemDetailComponent
   ],
   imports: [
     BrowserModule,

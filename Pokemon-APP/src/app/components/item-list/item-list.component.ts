@@ -24,4 +24,8 @@ export class ItemListComponent implements OnInit {
   getImage(name: string): string {
     return `${this.img}${name}.png`;
   }
+
+  getItemId(url: string): number {
+    return parseInt(url.split('/')[6]);
+  }
 }
