@@ -3,6 +3,7 @@ import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { PokemonListResponse } from '../interfaces/pokemon.interfaces';
 import { PokeomonDetailResponse } from '../interfaces/pokemon-detail.interfaces';
+import { PokemonDesCatResponse } from '../interfaces/pokemon-des-cat.interfaces';
 
 @Injectable({
   providedIn: 'root'
@@ -17,6 +18,10 @@ export class PokemonService {
 
   getPokemon(id: number): Observable<PokeomonDetailResponse>{
     return this.http.get<PokeomonDetailResponse>(`https://pokeapi.co/api/v2/pokemon/${id}/`);
+  }
+
+  getDesCatPokemon(id: number): Observable<PokemonDesCatResponse>{
+    return this.http.get<PokemonDesCatResponse>(`https://pokeapi.co/api/v2/pokemon-species/${id}/`);
   }
   
 }

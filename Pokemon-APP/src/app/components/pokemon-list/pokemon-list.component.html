@@ -1,7 +1,9 @@
 <div class="container mt-5 pt-5">
     <div class="row mt-5">
         @for(pokemon of listPokemon; track pokemon){
-            <app-pokemon-card [pokemonId]="getPokemonId(pokemon.url)"></app-pokemon-card>
+            <div class="col-md-3 col-12 p-2 my-3">
+                <app-pokemon-card [pokemonId]="getPokemonId(pokemon.url)"></app-pokemon-card>
+            </div>
         }
     </div>
 </div>

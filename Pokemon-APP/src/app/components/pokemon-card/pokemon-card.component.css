@@ -35,8 +35,11 @@
     color: #C9C9C9 !important;
 }
 
+a:hover h6{
+    color: #ff6b6b !important;
+}
 
-a:hover{
-    color: #f70202 !important;
+a:hover h5{
+    color: #ff6b6b !important;
 }
 

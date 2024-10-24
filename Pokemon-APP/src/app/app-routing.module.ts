@@ -4,11 +4,13 @@ import { PokemonListComponent } from './components/pokemon-list/pokemon-list.com
 import { ItemListComponent } from './components/item-list/item-list.component';
 import { GameListComponent } from './components/game-list/game-list.component';
 import { PageNotFoundComponent } from './shared/page-not-found/page-not-found.component';
+import { PokemonDetailComponent } from './components/pokemon-detail/pokemon-detail.component';
 
 const routes: Routes = [
   {path: 'pokemon', component: PokemonListComponent},
   {path: 'item', component: ItemListComponent},
   {path: 'game', component: GameListComponent},
+  {path: 'pokemon-detail/:id', component: PokemonDetailComponent},
   {path: '', redirectTo: '/pokemon', pathMatch: 'full'},
   {path: '**', component: PageNotFoundComponent}
 
