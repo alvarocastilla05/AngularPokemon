@@ -1,0 +1,96 @@
+<div class="h-100" [style]="cambiarColorSegunTipo(pokemon!.types[0].type.name)" style="overflow: hidden !important;">
+    <!--Cuerpo de la página-->
+    <div class="container w-100 d-flex flex-wrap justify-content-around pt-5 pb-4" style="margin-top: 100px !important;">
+                
+        <!--Imagen y descripción-->
+        <div class="container d-flex justify-content-center flex-wrap" style="width: 40%;">
+            <div class="w-100 d-flex justify-content-center">
+                <img [src]="pokemon?.sprites?.other?.['official-artwork']?.front_default" style="width: 100%;" [alt]="pokemon!.name">
+            </div>
+            <div id="descripcion" class="w-100">
+                <h3 id="descripcion" class="text-white m-3 tipografia">
+                    <!--{{ pokemon!.woah.flavor_text_entries.find(p => p.language.name == "es")?.flavor_text?.replace(/\n/g," ") }}-->
+                </h3>
+            </div>
+        </div>
+
+        <!--Información-->
+        <div class="container d-flex justify-content-center flex-wrap" style="width: 60%;">
+            <!--Nombre y número-->
+            <div id="nombreNumero" class="container w-100 d-flex justify-content-between" style="height: 8%">
+                <h1 id="nombre" class="text-light text-uppercase me-5 align-middle tipografia" style="font-size: 60px;">{{ pokemon!.name }}</h1>
+                <h1 id="numero" class="text-light ms-5 align-middle tipografia" style="font-size: 60px;">#{{ pokemonId }}</h1>
+            </div>
+
+            <!--Características-->
+            <div class="container bg-white rounded-4" style="height: 85%">
+                <!--Categoría y Tipos-->
+                <div class="container d-flex flex-wrap p-4">
+                    <span id="categoria">
+                        <!--div style="width: 45%;"><h2 class="tipografia" style="color: #707266">{{ pokemon }}</h2></div-->
+                    </span>
+                    @if(pokemon!.types.length > 1){
+                        <div id="tipo1" class="w-25">
+                            <div class="px-3 me-2 rounded-5" [style]="cambiarColorSegunTipo(pokemon!.types[0].type.name)">
+                                <h5 class="text-light text-center mt-1 p-1 text-capitalize tipografia">{{ pokemon!.types[0].type.name }}</h5>
+                            </div>
+                        </div>
+                        <div id="tipo2" class="w-25">
+                            <div class="px-3 ms-2 rounded-5" [style]="cambiarColorSegunTipo(pokemon!.types[1].type.name)">
+                                <h5 class="text-light text-center mt-1 p-1 text-capitalize tipografia">{{ pokemon!.types[1].type.name }}</h5>
+                            </div>
+                        </div>
+                    }@else if(pokemon!.types.length == 1){
+                        <div id="tipo1" class="w-25">
+                            <div class="px-3 me-2 rounded-5" [style]="cambiarColorSegunTipo(pokemon!.types[0].type.name)">
+                                <h5 class="text-light text-center mt-1 p-1 text-capitalize tipografia">{{ pokemon!.types[0].type.name }}</h5>
+                            </div>
+                        </div>
+                        <div id="tipo2" class="w-25">
+                            <div class="px-3 ms-2 rounded-5">
+                                <h5 class="text-light text-center mt-1 p-1 text-capitalize tipografia"></h5>
+                            </div>
+                        </div>
+                    }
+                </div>
+
+                <!--Peso, Altura y Habilidad-->
+                <div class="container d-flex flex-wrap justify-content-center">
+                    <div style="width: 30%;"><h2 class="tipografia"><i class="bi bi-box-seam-fill"></i> Peso</h2></div>
+                    <div style="width: 30%;"><h2 class="tipografia"><i class="bi bi-rulers"></i> Altura</h2></div>
+                    <div style="width: 30%;"><h2 class="tipografia"><i class="bi bi-star-fill"></i> Habilidad</h2></div>
+                </div>
+                <div id="pesoAlturaHabilidad" class="container d-flex flex-wrap justify-content-center gris">
+                    <div style="width: 30%;"><h2>{{ pokemon!.weight/10 }} kg</h2></div>
+                    <div style="width: 30%;"><h2>{{ pokemon!.height/10 }} m</h2></div>
+                    <div class="text-capitalize" style="width: 30%;"><h2>{{ pokemon!.abilities[0].ability.name }}</h2></div>
+                </div>
+
+                <div class="mt-5">
+                    <h2 class="ms-4 ps-3 tipografia"><i class="bi bi-bar-chart-line-fill"></i> Estadísticas</h2>
+                </div>
+
+                <div id="estadisitcas" class="container d-flex m-2 mt-3 mb-3">
+                    <div class="w-50 mx-4 d-flex justify-content-center flex-column">
+                        <div><h2 class="gris"><span class="tipografia planta" [style]="cambiarColorTextoSegunTipo(pokemon!.types[0].type.name)">
+                            HP:</span> {{ pokemon!.stats[0].base_stat}}</h2></div>
+                        <div><h2 class="gris"><span class="tipografia planta" [style]="cambiarColorTextoSegunTipo(pokemon!.types[0].type.name)">
+                            ATK:</span> {{ pokemon!.stats[1].base_stat}}</h2></div>
+                        <div><h2 class="gris"><span class="tipografia planta" [style]="cambiarColorTextoSegunTipo(pokemon!.types[0].type.name)">
+                            DEF:</span> {{ pokemon!.stats[2].base_stat}}</h2></div>
+                    </div>
+                    <div class="w-50 mx-4 d-flex justify-content-center flex-column">
+                        <div><h2 class="gris"><span class="tipografia planta" [style]="cambiarColorTextoSegunTipo(pokemon!.types[0].type.name)">
+                            SP ATK:</span> {{ pokemon!.stats[3].base_stat}}</h2></div>
+                        <div><h2 class="gris"><span class="tipografia planta" [style]="cambiarColorTextoSegunTipo(pokemon!.types[0].type.name)">
+                            SP DEF:</span> {{ pokemon!.stats[4].base_stat}}</h2></div>
+                        <div><h2 class="gris"><span class="tipografia planta" [style]="cambiarColorTextoSegunTipo(pokemon!.types[0].type.name)">
+                            SPD:</span> {{ pokemon!.stats[5].base_stat}}</h2></div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+</div>

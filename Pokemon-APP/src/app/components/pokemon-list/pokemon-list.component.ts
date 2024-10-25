@@ -11,8 +11,6 @@ export class PokemonListComponent implements OnInit{
 
   listPokemon: Pokemon[] = [];
 
-  imagen: string = 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/';
-
   constructor(private listaService: PokemonService){}
 
   ngOnInit(): void {
@@ -21,10 +19,8 @@ export class PokemonListComponent implements OnInit{
     });
   }
 
-  getImagenPokemon(url:string): string {
-    let id = url.split("/")[6];
-
-    return this.imagen+'/'+id+'.png';
+  getPokemonId(url: string): number {
+    return parseInt(url.split('/')[6]);
   }
 
 }

@@ -1,0 +1,33 @@
+<a [routerLink]="['/pokemon-detail', pokemonId]" class="text-decoration-none">
+    <div class="card border-0 mx-3 my-4" style="width: 290px;">  
+        <!--Parte superior-->
+        <div class="border-5 tipoDominante rounded-4 bordeCaja sombreado" [style]="cambiarColorOpacidadSegunTipo(pokemon!.types[0].type.name)">
+            <a><img [src]="pokemon?.sprites?.other?.['official-artwork']?.front_default" class="card-img-top rounded-4" [alt]="pokemon!.name" /></a>
+        </div>
+
+        <!--Parte inferior-->
+        <div class="container d-flex justify-content-between card-body rounded-4 mt-1 px-2 fondoNegro sombreado">
+            <div class="ms-2">
+                <h6 class="card-number m-0 mb-1 grisClaro tipografia">#{{ pokemonId }}</h6>
+                <h5 class="card-title text-light m-0 text-capitalize tipografia">{{ pokemon!.name }}</h5>
+            </div>
+            <div class="me-2 pt-2" style="width: 35%;">
+                @if(pokemon!.types.length > 1){
+                    <div class="px-3 rounded-5" [style]="cambiarColorSegunTipo(pokemon!.types[0].type.name)">
+                        <p class="text-light text-center mb-2 text-capitalize tipografia">{{ pokemon!.types[0].type.name }}</p>
+                    </div>
+                    <div class="px-3 rounded-5" [style]="cambiarColorSegunTipo(pokemon!.types[1].type.name)">
+                        <p class="text-light text-center mt-1 mb-0 text-capitalize tipografia">{{ pokemon!.types[1].type.name }}</p>
+                    </div>
+                }@else if(pokemon!.types.length == 1){
+                    <div class="px-3 rounded-5">
+                        <p class="text-light text-center mb-2 text-capitalize tipografia">&nbsp;</p>
+                    </div>
+                    <div class="px-3 rounded-5" [style]="cambiarColorSegunTipo(pokemon!.types[0].type.name)">
+                        <p class="text-light text-center mt-1 mb-0 text-capitalize tipografia">{{ pokemon!.types[0].type.name }}</p>
+                    </div>
+                }
+            </div>
+        </div>
+    </div>
+</a>

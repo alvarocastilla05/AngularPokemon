@@ -12,6 +12,8 @@ import { provideHttpClient } from '@angular/common/http';
 import { ItemListComponent } from './components/item-list/item-list.component';
 import { MenuNavComponent } from './shared/menu-nav/menu-nav/menu-nav.component';
 import { PageNotFoundComponent } from './shared/page-not-found/page-not-found.component';
+import { PokemonCardComponent } from './components/pokemon-card/pokemon-card.component';
+import { PokemonDetailComponent } from './components/pokemon-detail/pokemon-detail.component';
 import { ItemCardComponent } from './components/item-card/item-card.component';
 import { ItemDetailComponent } from './components/item-detail/item-detail.component';
 
@@ -25,6 +27,8 @@ import { ItemDetailComponent } from './components/item-detail/item-detail.compon
     ItemListComponent,
     MenuNavComponent,
     PageNotFoundComponent,
+    PokemonCardComponent,
+    PokemonDetailComponent,
     ItemCardComponent,
     ItemDetailComponent
   ],
