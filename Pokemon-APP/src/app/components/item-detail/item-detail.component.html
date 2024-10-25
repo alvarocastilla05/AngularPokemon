@@ -1,4 +1,4 @@
-<div style="overflow: hidden;">
+<div class="h-100" style="overflow: hidden !important; background-color: rgb(154, 214, 223, .4);">
     <div class="container-fluid d-flex flex-wrap justify-content-around mt-5 mb-5 pb-4"
     style="margin-top: 130px !important; height: fit-content;">
     <div class="container w-25 d-flex justify-content-center flex-wrap">
@@ -6,13 +6,13 @@
             <img id="imagen" [src]="getImage(item!.name)" style="width: 400px;" alt="imgPokemon">
         </div>
     </div>
-    <div class="container w-75 d-flex justify-content-center flex-wrap">
+    <div class="container w-75 d-flex justify-content-center align-content-center flex-wrap">
 
-        <div class="container w-100 d-flex flex-wrap justify-content-between jockey-one-regular" style="height: 15%">
+        <div class="container w-100 d-flex flex-wrap justify-content-between mb-3 ms-4" style="height: 15%">
             <h1 class="text-dark text-uppercase me-5 tipografia" style="font-size: 60px;">{{item!.name}}</h1>
         </div>
         <div class="w-100">
-            <h3 class="text-white m-3 jockey-one-regular tipografia fondoNegro sombreado p-4">
+            <h3 class="text-white m-3 tipografia fondoNegro sombreado p-4 rounded-4">
                 {{item!.effect_entries[0].effect}}
             </h3>
         </div>

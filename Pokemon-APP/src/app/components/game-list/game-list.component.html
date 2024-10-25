@@ -2,15 +2,17 @@
     <div class="row mt-5">
         @for (item of listGames; track item) {
             <div class="col-md-3 col-12 p-2 my-3">
-                <div class="card border-0 mx-3 my-4" style="width: 290px;">  
-                    <!--Parte inferior-->
-                    <div class="container d-flex justify-content-between card-body rounded-4 mt-1 px-2 fondoNegro sombreado">
-                        <div class="ms-2">
-                            <h5 class="card-title text-light m-0 text-capitalize tipografia">{{ item.name }}</h5>
+                <a>
+                    <div class="card border-0 mx-3 my-4" style="width: 290px;">  
+                        <!--Parte inferior-->
+                        <div class="container d-flex justify-content-between card-body rounded-4 mt-1 px-2 fondoNegro sombreado">
+                            <div class="ms-2">
+                                <h5 class="card-title text-light m-0 text-capitalize tipografia">{{ item.name }}</h5>
+                            </div>
+                        
                         </div>
-                       
                     </div>
-                </div>
+                </a>
             </div>
         }
     </div>
